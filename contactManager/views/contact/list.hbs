@@ -1,0 +1,32 @@
+<h3><a class="btn btn-secondary" href='/contact'>
+<i class="fa fa-plus"></i>
+Add New Contact
+</a>
+</h3>
+<table class="table table-stripped">
+<thead>
+<tr>
+<th>Name</th>
+<th>Phone No.</th>
+<th>Email</th>
+<th>Date Of Birth</th>
+<th></th>
+
+</tr>
+</thead>
+<tbody>
+{{#each list}}
+<tr>
+<td>{{this.name}}</td>
+<td>{{this.phone}}</td>
+<td>{{this.email}}</td>
+<td>{{this.DOB}}</td>
+<td>
+<a href="/contact/{{this._id}}"><i class="fas fa-edit" aria-hidden="true"></i><a>
+<a href="/contact/delete/{{this._id}}"
+><i class="fas fa-trash" aria-hidden="true"></i></a>
+</td>
+</tr>
+{{/each}}
+</tbody>
+</table>

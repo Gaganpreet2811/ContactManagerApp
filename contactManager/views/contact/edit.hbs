@@ -1,0 +1,53 @@
+<h3>{{viewTitle}}</h3>
+<form autocomplete="off" action="/contact" method="POST">
+	<div class="form-group">
+	<label>Name</label>
+	<input type="text" class="form-control" 
+	value="{{req.name}}" name="name" placeholder="type your contact name">
+	<div class="text-danger">
+	{{contact.nameError}}</div>
+	</div>
+	<div class="form-group">
+	<label>DOB</label>
+	<input type="text" class="form-control" name="DOB" 
+	value="{{req.DOB}}" placeholder=" ">
+
+	</div>
+	<div class="form-row">
+	<div class="form-group col-md-11">
+	<label>Mobile Number</label>
+	<input type="text" class="form-control"
+	value="{{req.phone}}"  name="phone" placeholder="type your phone No ">
+	<div class="text-danger">
+	{{contact.phoneError}}</div>
+
+	</div>
+	<div class="form-group col-md-1">
+	<br>
+	<i class="fas fa-plus-circle float-right "></i>
+	</div>
+	</div>
+	<div class="form-row">
+	<div class="form-group col-md-11">
+	<label>Email Address</label>
+	<input type="text" class="form-control" 
+	value="{{req.email}}" name="email" type="email" placeholder="type your email address ">
+	<div class="text-danger">
+	{{contact.emailError}}</div>
+
+	</div>
+	<div class="form-group col-md-1">
+	<br>
+	<i class="fas fa-plus-circle float-right "></i>
+	</div>
+	
+	</div>
+	<div class="form-group">
+	<button type="submit" class="btn float-right btn-info">Save</button>
+	<a class="btn btn-secondary" href='/contact/list'>
+<i class="fa fa-list-alt"></i>
+View all Contacts
+</a>
+	</div>
+</form>
+
