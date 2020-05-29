@@ -6,3 +6,4 @@
   (iv)For connecting local mongoDb-->goto mongodb bin folder
       then execute command mongod --dbpath path of the data folder of your pc for mongoDB
     (v)to see all the crud operations connect it to mongoCompass by creating database: Contact and collection: contacts
+(vi) then start the app with command nodemon
