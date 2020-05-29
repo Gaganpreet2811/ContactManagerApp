@@ -6,8 +6,9 @@ const Contact=mongoose.model('Contact')
 router.get('/',(req,res)=>
 {
 	res.render('contact/add',{
-		viewTitle:"Add New Contact"
-	})
+		viewTitle:"Add New Contact",
+		var1:true
+})
 })
 router.post('/',(req,res)=>{
 	if(req.body._id=='')
@@ -28,7 +29,8 @@ function updateRecord(req,res)
 			handleValidationError(err,req.body)
 			res.render("contact/add",{
 				viewTitle:"Update Contact",
-			contact: req.body})
+			contact: req.body,
+			var1:false})
 
 		}
 		else 
@@ -54,7 +56,7 @@ function insertRecord(req,res)
 			handleValidationError(err,req.body)
 			res.render("contact/add",{
 				viewTitle:"Add New Contact",
-			contact: req.body})
+			contact: req.body,var1:true})
 
 		}
 		else
@@ -109,7 +111,8 @@ router.get('/:id',(req,res)=>
 		{
 			res.render("contact/add",{
 				viewTitle:"Update Contact",
-				contact:doc
+				contact:doc,
+				var1:false
 			})
 		}
 
