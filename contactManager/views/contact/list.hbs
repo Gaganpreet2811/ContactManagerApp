@@ -1,8 +1,12 @@
 <h3><a class="btn btn-secondary" href='/contact'>
+
 <i class="fa fa-plus"></i>
 Add New Contact
 </a>
 </h3>
+<div class="float-right">
+<input type="text">
+</div>
 <table class="table table-stripped">
 <thead>
 <tr>
@@ -10,7 +14,7 @@ Add New Contact
 <th>Phone No.</th>
 <th>Email</th>
 <th>Date Of Birth</th>
-<th></th>
+<th>Edit/Delete</th>
 
 </tr>
 </thead>
@@ -23,7 +27,7 @@ Add New Contact
 <td>{{this.DOB}}</td>
 <td>
 <a href="/contact/{{this._id}}"><i class="fas fa-edit" aria-hidden="true"></i><a>
-<a href="/contact/delete/{{this._id}}"
+<a href="/contact/delete/{{this._id}}" onclick="return confirm('Are you sure to delete this record ?');"
 ><i class="fas fa-trash" aria-hidden="true"></i></a>
 </td>
 </tr>
