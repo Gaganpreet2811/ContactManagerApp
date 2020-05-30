@@ -7,3 +7,7 @@
       then execute command mongod --dbpath path of the data folder of your pc for mongoDB
     (v)to see all the crud operations connect it to mongoCompass by creating database: Contact and collection: contacts
 (vi) then start the app with command nodemon
+Routes:
+localhost:3000/contact
+localhost:3000/contact/list
+NOTE: Everytime you must add two contact numbers otherwise it will give error in insertion.
